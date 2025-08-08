@@ -582,7 +582,7 @@
 
         <p class="description">
           Specializing in <strong>CrossFit</strong>, <strong>TRX</strong>, <strong>HIIT</strong>, <strong>Weight Loss</strong>,
-          <strong>Toning</strong>, <strong>Body Figuring correction</strong> <strong>, Bodybuilding contest preparation</strong>,
+          <strong>Toning</strong>, <strong>Body Figuring/Posture correction</strong> <strong>, Bodybuilding contest preparation</strong>,
           and <strong>Aesthetic Specialist Coach</strong>.
           Dedicated to transforming lives through customized training, professional guidance, and motivation that lasts.
         </p>
@@ -847,7 +847,7 @@
 
                     <img src="https://img.icons8.com/fluency-systems-filled/48/FFD700/scale.png" alt="Weight Loss Gain Icon" />
         </div>
-        <h3>Body Weight Loss / Gain</h3>
+        <h3>Body Physique Weight Loss <br> Gain Training</h3>
         <p>Customized fitness plans for healthy weight loss or muscle gain transformation.</p>
       </div>
 
@@ -856,7 +856,7 @@
         <div class="icon">
                     <img src="diet.png" alt="Tone Shape Icon" />
         </div>
-        <h3>Body Posture corrections</h3>
+        <h3>Body Figuring / Posture <br>corrections</h3>
         <p>Transform your physique with personalized shaping and body-toning workouts.</p>
       </div>
 
@@ -865,8 +865,8 @@
         <div class="icon">
           <img src="https://img.icons8.com/fluency-systems-filled/48/FFD700/health-graph.png" alt="PCOD PCOS Icon" />
         </div>
-        <h3>PCOS/PCOS (post pregnancy)</h3>
-        <p>Specialized training to manage PCOD/PCOS(Post Pregnancy) naturally with workout & nutrition guidance.</p>
+        <h3>PCOD / PCOS / Post-Pregnancy <br>Weight Loss Training</h3>
+        <p>Specialized in manage PCOD/PCOS(Post Pregnancy) naturally with workout & nutrition guidance.</p>
       </div>
 
       <!-- Feature 4 -->
@@ -874,7 +874,7 @@
         <div class="icon">
           <img src="https://img.icons8.com/fluency-systems-filled/48/FFD700/laptop.png" alt="Online Training Icon" />
         </div>
-        <h3>Online Training</h3>
+        <h3>General & Personal Training, <br> Online / Offline</h3>
         <p>Train with us from anywhere, live fitness coaching and progress tracking online.</p>
       </div>
 
@@ -883,7 +883,7 @@
         <div class="icon">
           <img src="https://img.icons8.com/fluency-systems-filled/48/FFD700/dumbbell.png" alt="Latest Equipment Icon" />
         </div>
-        <h3>Advanced-level equipment</h3>
+        <h3>Train with <br>Advanced-Level Machines</h3>
         <p>Get access to the most modern and high-end fitness machines.</p>
       </div>
 
@@ -892,7 +892,7 @@
         <div class="icon">
           <img src="fitness-coach-icon.png" alt="Expert Trainers Icon" />
         </div>
-        <h3>Expert Coaches</h3>
+        <h3>Trained by <br> Expert Coaches</h3>
         <p>Train under certified professionals to crush your goals efficiently.</p>
       </div>
 
@@ -1011,7 +1011,6 @@
 
 
 
-
 <section class="transformation-slider-section">
   <div class="container">
     <h2 class="section-title" data-aos="fade-up">Real <span>Transformations</span></h2>
@@ -1122,7 +1121,7 @@
   font-size: 1.1rem;
 }
 
-/* ✅ Mobile Optimizations */
+/* Mobile Optimizations */
 @media (max-width: 768px) {
   .transformation-slider-section .section-title {
     font-size: 2rem;
@@ -1131,17 +1130,17 @@
 
   .slider-wrapper {
     flex-direction: column;
-    overflow: visible; /* ✅ Fix: Ensure left images visible */
+    width: 100%;
   }
 
   .slider {
+    display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     gap: 16px;
-    padding: 10px 12px;
-    width: 100%;
+    padding: 10px 24px; /* Added padding to show edges */
     -webkit-overflow-scrolling: touch;
   }
 
@@ -1171,6 +1170,24 @@
     font-size: 0.9rem;
   }
 }
+
+/* Optional: Scroll hint */
+.slider::after {
+  content: '⇠ Swipe ⇢';
+  position: absolute;
+  bottom: -30px;
+  font-size: 0.9rem;
+  color: #888;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .slider::after {
+    display: block;
+  }
+}
 </style>
 
 <script>
@@ -1180,10 +1197,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevBtn = document.querySelector('.prev-btn');
   let current = 0;
 
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+
   function updateSlider() {
     slides.forEach((slide, index) => {
       slide.classList.remove('active');
-      if (index === current) {
+      if (!isMobile() && index === current) {
         slide.classList.add('active');
       }
     });
@@ -1200,9 +1221,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   updateSlider();
+  
+  // Optional: Update on window resize for active class
+  window.addEventListener('resize', updateSlider);
 });
 </script>
-
 
 
 
