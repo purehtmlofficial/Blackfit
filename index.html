@@ -173,7 +173,12 @@
 
   <!-- Top Banner -->
   <div class="top-banner">
-    <div class="left">Black Fit Unisex Gym</div>
+    <div class="left" onclick="scrollToTop()">Black Fit Unisex Gym</div>
+    <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
     <div class="right">
       <button class="hamburger" id="menuBtn" aria-label="Menu">
         <i class="fas fa-bars"></i>
@@ -585,7 +590,6 @@
 
 
 
-
 <!-- ABOUT SECTION -->
 <section id="about" class="about-section">
   <div class="container">
@@ -729,12 +733,23 @@
     overflow-y: auto;
   }
 
+  /* ✅ Fixed Close Button */
   .close {
-    position: absolute;
+    position: fixed;
     right: 20px;
-    top: 15px;
-    font-size: 28px;
+    top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    z-index: 1000;
   }
 
   .modal-body {
@@ -873,6 +888,15 @@
       flex: 1 1 45%;
       max-width: 45%;
       height: 90px;
+    }
+
+    /* ✅ Mobile Close Button */
+    .close {
+      font-size: 28px;
+      right: 15px;
+      top: 15px;
+      width: 36px;
+      height: 36px;
     }
   }
 </style>
@@ -1959,12 +1983,6 @@ window.onload = function(){ setTimeout(()=>{ openPopup('popup1'); },5000); };
 
 <!-- Font Awesome for WhatsApp Icon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
-
-
-
-
-
 
 
 </body>
