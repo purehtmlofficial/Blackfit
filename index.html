@@ -27,205 +27,270 @@
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#000000" />
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      font-family: 'Montserrat', sans-serif; /* Premium Font */
-      scroll-behavior: smooth;
-      background-color: #000;
-      color: #f6d743;
-    }
-
-    /* Sticky Top Banner */
-    .top-banner {
-      position: sticky;
-      top: 0;
-      width: 100%;
-      background-color: #111;
-      color: #f6d743;
-      padding: 12px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 1rem;
-      border-bottom: 2px solid #f6d743;
-      z-index: 1000;
-    }
-
-    .top-banner .left {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .top-banner .hamburger {
-      background: none;
-      border: none;
-      color: #f6d743;
-      font-size: 22px;
-      cursor: pointer;
-    }
-    .top-banner .hamburger:focus {
-      outline: none;
-    }
-
-    /* Popup Overlay */
-    .popup-overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.95);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 2000;
-    }
-
-    .popup-content {
-      background: #111;
-      border: 2px solid #f6d743;
-      border-radius: 10px;
-      padding: 30px;
-      text-align: center;
-      width: 90%;
-      max-width: 400px;
-      color: #f6d743;
-      position: relative;
-    }
-
-    .popup-content h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-
-    .popup-content a {
-      display: block;
-      margin: 15px 0;
-      color: #f6d743;
-      font-size: 1.2rem;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      font-weight: 600;
-    }
-
-    .popup-content a:hover {
-      color: #000000;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      background: none;
-      border: none;
-      color: #f6d743;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url('BG.webp') center center / cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 8vw, 4.5rem);
-      letter-spacing: 2px;
-      line-height: 1.3;
-      animation: glow 1.5s ease-in-out infinite alternate;
-      font-weight: 900; /* Bold for premium look */
-      max-width: 90%;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 5px #000, 0 0 10px #00000088; }
-      to   { text-shadow: 0 0 5px #ff5733, 0 0 20px #ff5733aa; }
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .top-banner .left {
-        font-size: 1.2rem;
-      }
-      .popup-content h2 {
-        font-size: 1.5rem;
-      }
-      .popup-content a {
-        font-size: 1rem;
-      }
-    }
-  </style>
 </head>
 <body>
-
-  <!-- Top Banner -->
-  <div class="top-banner">
-    <div class="left" onclick="scrollToTop()">Black Fit Unisex Gym</div>
-    <script>
+<!-- Top Banner -->
+<div class="top-banner">
+  <div class="left" onclick="scrollToTop()">Black Fit Unisex Gym</div>
+  <script>
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    </script>
-    <div class="right">
-      <button class="hamburger" id="menuBtn" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </div>
-
-  <!-- Popup Menu -->
-  <div class="popup-overlay" id="popup">
-    <div class="popup-content">
-      <button class="close-btn" id="closeBtn">&times;</button>
-      <h2>Visit Us</h2>
-      <a href="https://maps.app.goo.gl/RZP1twE1x6bhCvakQ" target="_blank">📍 Google Maps(Location)</a>
-      <a href="tel:+919894100280">📞 +91 98941 00280</a>
-      <a href="mailto:blackfitclub@gmail.com">✉️ blackfitclub@gmail.com</a>
-      <a href="https://www.instagram.com/blackfit_unisex_gym" target="_blank">📸 Instagram</a>
-      <a href="https://wa.me/919894100280" target="_blank">💬 WhatsApp</a>
-    </div>
-  </div>
-
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <h1>Advanced Body Physique Transformation and Wellness Expert</h1>
-  </section>
-
-  <!-- Script -->
-  <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const popup = document.getElementById("popup");
-    const closeBtn = document.getElementById("closeBtn");
-
-    menuBtn.addEventListener("click", () => {
-      popup.style.display = "flex";
-    });
-
-    closeBtn.addEventListener("click", () => {
-      popup.style.display = "none";
-    });
-
-    window.addEventListener("click", (e) => {
-      if (e.target === popup) {
-        popup.style.display = "none";
-      }
-    });
   </script>
+  <div class="right">
+    <button class="hamburger" id="menuBtn" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</div>
 
+<!-- Popup Menu -->
+<div class="popup-overlay" id="popup">
+  <div class="popup-content">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <h2>Visit Us</h2>
+    <a href="https://maps.app.goo.gl/RZP1twE1x6bhCvakQ" target="_blank">📍 Google Maps (Location)</a>
+    <a href="tel:+919894100280">📞 +91 98941 00280</a>
+    <a href="mailto:blackfitclub@gmail.com">✉️ blackfitclub@gmail.com</a>
+    <a href="https://www.instagram.com/blackfit_unisex_gym" target="_blank">
+      <i class="fab fa-instagram"></i> Instagram </a>
+      <a href="https://wa.me/919894100280" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+  </div>
+</div>
 
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <div class="hero-content">
+    <h1>ADVANCED BODY PHYSIQUE TRANSFORMATION AND WELLNESS EXPERT</h1>
+    <p class="hero-subline">Body Pain Free <br> Wellness Stretching Expert!</p>
+        <button class="primary-btn" onclick="openPopup('popup2')"> Relief Your Pain😇</button>
+  </div>
+</section>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body, html {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #000;
+    color: #f6d743;
+  }
+
+  /* Sticky Top Banner */
+  .top-banner {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #111;
+    color: #f6d743;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    border-bottom: 2px solid #f6d743;
+    z-index: 1000;
+  }
+
+  .top-banner .left {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  .top-banner .hamburger {
+    background: none;
+    border: none;
+    color: #f6d743;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  /* Popup Overlay */
+  .popup-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  }
+
+  .popup-content {
+    background: #111;
+    border: 2px solid #f6d743;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    color: #f6d743;
+    position: relative;
+    box-shadow: 0 0 20px rgba(246, 215, 67, 0.3);
+  }
+
+  .popup-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .popup-content a {
+    display: block;
+    margin: 15px 0;
+    color: #f6d743;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+  }
+
+  .popup-content a:hover {
+    color: #ff5733;
+    text-shadow: 0 0 8px #ff5733aa;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #f6d743;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('BG.webp') center center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    letter-spacing: 2px;
+    line-height: 1.3;
+    animation: glow 1.5s ease-in-out infinite alternate;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .hero-subline {
+    margin-top: 20px;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-weight: 600;
+    color: #f6d743;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .hero-subline:hover {
+    color: #ff5733;
+    text-shadow: 0 0 8px #ff5733aa;
+    transform: scale(1.05);
+  }
+
+  .primary-btn {
+    margin-top: 25px;
+    background: #f6d743;
+    color: #000;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+
+  .primary-btn:hover {
+    background: #ff5733;
+    color: #fff;
+    box-shadow: 0 0 12px #ff5733aa;
+    transform: translateY(-2px);
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 5px #000, 0 0 10px #00000088; }
+    to   { text-shadow: 0 0 5px #ff5733, 0 0 20px #ff5733aa; }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .top-banner .left {
+      font-size: 1.2rem;
+    }
+    .popup-content h2 {
+      font-size: 1.5rem;
+    }
+    .popup-content a {
+      font-size: 1rem;
+    }
+    .hero h1 {
+      font-size: 1.8rem;
+      line-height: 1.4;
+      max-width: 95%;
+    }
+    .hero-subline {
+      font-size: 1rem;
+      margin-top: 15px;
+    }
+  }
+</style>
+
+<!-- Script -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const popup = document.getElementById("popup");
+  const closeBtn = document.getElementById("closeBtn");
+
+  // Open popup
+  function openPopup() {
+    popup.style.display = "flex";
+  }
+
+  menuBtn.addEventListener("click", () => {
+    popup.style.display = "flex";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+</script>
 
 
 
@@ -597,9 +662,9 @@
       <img src="about.webp" alt="Gym Image">
     </div>
     <div class="about-content">
-      <h2 class="section-title" data-aos="fade-up">About <span>Blackfit Gym!</span></h2>
+      <h2 class="section-title" data-aos="fade-up">About <span>Blackfit Gym & Pain Free Wellness!</span></h2>
       <p>
-        At <strong>Blackfit Unisex Gym</strong>, we’re more than just a fitness center, we’re a community built on strength, wellness, and transformation. Whether you're a beginner or a pro, our expert coaches and modern equipment are here to help you crush your fitness goals.
+        At <strong>Blackfit Unisex Gym</strong> , we’re more than just a fitness center, we’re a community built on strength, wellness, and transformation. Whether you're a beginner or a pro, our expert coaches and modern equipment are here to help you crush your fitness goals.
       </p>
       <p>
         Join a motivating environment where every rep takes you one step closer to a better you. Your fitness journey begins here!
@@ -913,7 +978,7 @@
       <!-- Feature 1 -->
       <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
         <div class="icon">
-          <img src="https://img.icons8.com/fluency-systems-filled/48/FFD700/scale.png" alt="Weight Loss Gain Icon" />
+          <img src="weight-loss.png" alt="Weight Loss Gain Icon" />
         </div>
         <h3>Body Physique Weight Loss / Weight Gain</h3>
         <p>Customized fitness plans for healthy weight loss or muscle gain transformation.</p>
@@ -1095,29 +1160,69 @@
 
 
 
+
+
 <section class="transformation-slider-section">
   <div class="container">
     <h2 class="section-title" data-aos="fade-up">Real <span>Transformations</span></h2>
-    
-    <div class="slider-wrapper">
-      <button class="nav-btn prev-btn">❮</button>
 
-      <div class="slider">
+    <div class="slider-wrapper">
+      <button class="nav-btn prev-btn" aria-label="Previous">❮</button>
+
+      <div class="slider" id="transformations">
+        <!-- Slide 1 -->
         <div class="slide" data-index="0">
           <img src="Trans1.jpg" alt="Transformation 1">
           <div class="caption">💪 35 Days | 12.5 kg Loss</div>
         </div>
+        <!-- Slide 2 -->
         <div class="slide" data-index="1">
           <img src="Trans2.jpg" alt="Transformation 2">
           <div class="caption">🔥 18 kg Fat Loss</div>
         </div>
+        <!-- Slide 3 -->
         <div class="slide" data-index="2">
           <img src="Trans3.jpg" alt="Transformation 3">
           <div class="caption">⭐️ Incredible Difference</div>
         </div>
+        <!-- New Slide 4 -->
+        <div class="slide" data-index="3">
+          <img src="transform4.webp" alt="Transformation 4">
+          <div class="caption">⚡ Amazing Progress</div>
+        </div>
+        <!-- New Slide 5 -->
+        <div class="slide" data-index="4">
+          <img src="transform5.webp" alt="Transformation 5">
+          <div class="caption">🔥 Shredded Look</div>
+        </div>
+        <!-- New Slide 6 -->
+        <div class="slide" data-index="5">
+          <img src="transform6.webp" alt="Transformation 6">
+          <div class="caption">💥 Lean & Fit</div>
+        </div>
+        <!-- New Slide 7 -->
+        <div class="slide" data-index="6">
+          <img src="transform7.webp" alt="Transformation 7">
+          <div class="caption">⭐ True Dedication</div>
+        </div>
+        <!-- New Slide 8 -->
+        <div class="slide" data-index="7">
+          <img src="transform8.webp" alt="Transformation 8">
+          <div class="caption">💪 Hardcore Gains</div>
+        </div>
+        <!-- New Slide 9 -->
+        <div class="slide" data-index="8">
+          <img src="transform9.webp" alt="Transformation 9">
+          <div class="caption">🔥 Fat to Fit</div>
+        </div>
+        <!-- New Slide 10 -->
+        <div class="slide" data-index="9">
+          <img src="transform10.webp" alt="Transformation 10">
+          <div class="caption">⚡ Total Transformation</div>
+        </div>
       </div>
 
-      <button class="nav-btn next-btn">❯</button>
+      <button class="nav-btn next-btn" aria-label="Next">❯</button>
     </div>
   </div>
 </section>
@@ -1143,9 +1248,9 @@
 
 .slider-wrapper {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: center;
   gap: 10px;
 }
 
@@ -1161,27 +1266,28 @@
   transition: 0.3s ease;
 }
 
-.nav-btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
+.nav-btn:hover { background: rgba(255, 255, 255, 0.2); }
 
+/* Make the track scrollable on ALL viewports */
 .slider {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
-  overflow: hidden;
-  width: 100%;
-  max-width: 960px;
-  position: relative;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 10px 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
 }
+.slider::-webkit-scrollbar { display: none; } /* WebKit */
 
 .slide {
-  flex: 0 0 300px;
-  opacity: 0.4;
-  filter: blur(4px);
-  transition: all 0.4s ease;
-  transform: scale(0.9);
+  flex: 0 0 300px;           /* card width on desktop */
+  scroll-snap-align: center; /* center each card when scrolling */
+  transition: transform .35s ease, filter .35s ease, opacity .35s ease;
+  opacity: .6;
+  filter: blur(2px);
+  transform: scale(.95);
   position: relative;
 }
 
@@ -1195,119 +1301,96 @@
 .slide img {
   width: 100%;
   border-radius: 16px;
+  display: block;
   box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
 }
 
 .caption {
   margin-top: 10px;
-  font-weight: bold;
+  font-weight: 700;
   color: #FFD700;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
-/* Mobile Optimizations */
+/* Mobile tweaks */
 @media (max-width: 768px) {
   .transformation-slider-section .section-title {
     font-size: 2rem;
     margin-bottom: 40px;
   }
-
-  .slider-wrapper {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .slider {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 16px;
-    padding: 10px 24px; /* Added padding to show edges */
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .slide {
-    flex: 0 0 85%;
-    scroll-snap-align: center;
-    opacity: 1 !important;
-    filter: none !important;
-    transform: scale(1) !important;
-  }
-
-  .nav-btn {
-    display: none;
-  }
-
-  .caption {
-    font-size: 1rem;
-  }
+  .slide { flex: 0 0 85%; transform: scale(1); opacity: 1; filter: none; }
+  .nav-btn { display: none; }
+  .caption { font-size: 1rem; }
 }
 
 @media (max-width: 480px) {
-  .slide {
-    flex: 0 0 90%;
-  }
-
-  .caption {
-    font-size: 0.9rem;
-  }
+  .slide { flex: 0 0 90%; }
+  .caption { font-size: .95rem; }
 }
 
-/* Optional: Scroll hint */
+/* Optional: scroll hint on mobile */
 .slider::after {
   content: '⇠ Swipe ⇢';
-  position: absolute;
-  bottom: -30px;
-  font-size: 0.9rem;
-  color: #888;
+  position: sticky;
   left: 50%;
   transform: translateX(-50%);
+  bottom: -6px;
+  font-size: .9rem;
+  color: #888;
   display: none;
 }
-
-@media (max-width: 768px) {
-  .slider::after {
-    display: block;
-  }
-}
+@media (max-width: 768px) { .slider::after { display: block; } }
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const slides = document.querySelectorAll('.slide');
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.getElementById('transformations');
+  const slides = Array.from(slider.querySelectorAll('.slide'));
   const nextBtn = document.querySelector('.next-btn');
   const prevBtn = document.querySelector('.prev-btn');
-  let current = 0;
 
-  function isMobile() {
-    return window.innerWidth <= 768;
+  // Utility: distance between slide starts (accounts for gap)
+  function stepSize() {
+    if (slides.length < 2) return slides[0]?.getBoundingClientRect().width || 300;
+    return slides[1].offsetLeft - slides[0].offsetLeft;
   }
 
-  function updateSlider() {
-    slides.forEach((slide, index) => {
-      slide.classList.remove('active');
-      if (!isMobile() && index === current) {
-        slide.classList.add('active');
-      }
+  // Scroll by exactly one card
+  function scrollBySlide(dir = 1) {
+    slider.scrollBy({ left: dir * stepSize(), behavior: 'smooth' });
+  }
+
+  // Mark the slide closest to the center as active
+  function updateActive() {
+    const center = slider.scrollLeft + slider.clientWidth / 2;
+    let closestIdx = 0;
+    let minDist = Infinity;
+    slides.forEach((s, i) => {
+      const start = s.offsetLeft + s.clientWidth / 2;
+      const d = Math.abs(start - center);
+      if (d < minDist) { minDist = d; closestIdx = i; }
     });
+    slides.forEach(s => s.classList.remove('active'));
+    slides[closestIdx]?.classList.add('active');
   }
 
-  nextBtn?.addEventListener('click', () => {
-    current = (current + 1) % slides.length;
-    updateSlider();
+  // Buttons
+  nextBtn?.addEventListener('click', () => scrollBySlide(1));
+  prevBtn?.addEventListener('click', () => scrollBySlide(-1));
+
+  // Keep active in sync with scroll & resize
+  slider.addEventListener('scroll', () => requestAnimationFrame(updateActive));
+  window.addEventListener('resize', () => requestAnimationFrame(updateActive));
+
+  // Keyboard arrows (desktop accessibility)
+  slider.setAttribute('tabindex', '0');
+  slider.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); scrollBySlide(1); }
+    if (e.key === 'ArrowLeft')  { e.preventDefault(); scrollBySlide(-1); }
   });
 
-  prevBtn?.addEventListener('click', () => {
-    current = (current - 1 + slides.length) % slides.length;
-    updateSlider();
-  });
-
-  updateSlider();
-  
-  // Optional: Update on window resize for active class
-  window.addEventListener('resize', updateSlider);
+  // Init
+  updateActive();
 });
 </script>
 
