@@ -29,9 +29,13 @@
 
 </head>
 <body>
-<!-- Top Banner -->
+
+  <!-- Top Banner -->
 <div class="top-banner">
-  <div class="left" onclick="scrollToTop()">Black Fit Unisex Gym</div>
+  <div class="left" onclick="scrollToTop()">
+    <div class="brand-title">Black Fit Unisex Gym &</div>
+    <div class="brand-subtitle">Pain-Free Stretching Expert</div>
+  </div>
   <script>
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -65,7 +69,7 @@
   <div class="hero-content">
     <h1>ADVANCED BODY PHYSIQUE TRANSFORMATION AND WELLNESS EXPERT</h1>
     <p class="hero-subline">Body Pain Free <br> Wellness Stretching Expert!</p>
-        <button class="primary-btn" onclick="openPopup('popup2')"> Relief Your Pain😇</button>
+        <button class="primary-btn" onclick="openPopup('popup2')">Relief Your Pain😇</button>
   </div>
 </section>
 
@@ -104,6 +108,15 @@
     font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
+  }
+  .brand-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .brand-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: #f1f1f1; /* adjust color as per your theme */
   }
 
   .top-banner .hamburger {
@@ -196,7 +209,7 @@
     letter-spacing: 2px;
     line-height: 1.3;
     animation: glow 1.5s ease-in-out infinite alternate;
-    font-weight: 900;
+    font-weight: 800;
     text-transform: uppercase;
     text-align: center;
     max-width: 900px;
@@ -205,15 +218,15 @@
 
   .hero-subline {
     margin-top: 20px;
-    font-size: clamp(1rem, 4vw, 1.5rem);
-    font-weight: 600;
-    color: #f6d743;
+    font-size: clamp(1rem, 4vw, 1.8rem);
+    font-weight: 700;
+    color: #ff5733;
     transition: all 0.3s ease;
     text-align: center;
   }
 
   .hero-subline:hover {
-    color: #ff5733;
+    color: #ffffff;
     text-shadow: 0 0 8px #ff5733aa;
     transform: scale(1.05);
   }
@@ -654,7 +667,6 @@
 
 
 
-
 <!-- ABOUT SECTION -->
 <section id="about" class="about-section">
   <div class="container">
@@ -662,13 +674,13 @@
       <img src="about.webp" alt="Gym Image">
     </div>
     <div class="about-content">
-      <h2 class="section-title" data-aos="fade-up">About <span>Blackfit Gym & Pain Free Wellness!</span></h2>
+      <h2 class="section-title" data-aos="fade-up">About <span>Blackfit Gym & Pain-Free Stretching Expert!</span></h2>
       <p>
-        At <strong>Blackfit Unisex Gym</strong> , we’re more than just a fitness center, we’re a community built on strength, wellness, and transformation. Whether you're a beginner or a pro, our expert coaches and modern equipment are here to help you crush your fitness goals.
+        At <strong>Blackfit Unisex Gym</strong> , we believe fitness is not just about lifting weights,
+         it’s about building strength, flexibility, and living pain-free. Along with state-of-the-art equipment and expert coaching,
+         we specialize in <strong>Pain-Free Stretching </strong> techniques designed to improve mobility, correct posture, and prevent injuries.
       </p>
-      <p>
-        Join a motivating environment where every rep takes you one step closer to a better you. Your fitness journey begins here!
-      </p>
+
       <button class="founder-btn" onclick="document.getElementById('founderModal').style.display='flex'">Meet the Expert</button>
     </div>
   </div>
@@ -677,8 +689,7 @@
 <!-- FOUNDER MODAL -->
 <div id="founderModal" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="document.getElementById('founderModal').style.display='none'">&times;</span>
-    
+
     <div class="modal-body">
       <div class="left">
         <img src="founder.JPG" alt="Founder Arulraj J" class="founder-img">
@@ -688,14 +699,13 @@
         
         <div class="designation-box">
           <h4>Founder & Body Physique Transformation Specialist</h4>
-          <p>Certified Fitness Trainer | Brand Ambassador – Team BOSS Fitness Academy</p>
+          <p> Brand Ambassador | Team BOSS Fitness Academy | Certified Fitness Trainer </p>
         </div>
 
         <p class="description">
           Specializing in <strong>CrossFit</strong>, <strong>TRX</strong>, <strong>HIIT</strong>, <strong>Weight Loss</strong>,
-          <strong>Toning</strong>, <strong>Body Figuring/Posture correction</strong>, <strong>Bodybuilding contest preparation</strong>,
-          and <strong>Aesthetic Specialist Coaching</strong>.
-          Dedicated to transforming lives through customized training, professional guidance, and motivation that lasts.
+          <strong>Toning</strong>, <strong>Body Figuring/Posture correction</strong>, <strong>Bodybuilding contest preparation, Pain-Free Stretching Expert</strong>,
+          and <strong>Aesthetic Specialist</strong>.
         </p>
       </div>
     </div>
@@ -708,6 +718,10 @@
       <img src="IAO.webp" alt="Certificate 4">
       <img src="Welcare.webp" alt="Certificate 5">
     </div>
+
+    <!-- Close Button at Bottom -->
+    <span class="close" onclick="document.getElementById('founderModal').style.display='none'">&times;</span>
+
   </div>
 </div>
 
@@ -798,29 +812,32 @@
     overflow-y: auto;
   }
 
-  /* ✅ Fixed Close Button */
+  /* ✅ Close Button at Bottom */
   .close {
-    position: fixed;
-    right: 20px;
-    top: 20px;
     font-size: 32px;
     font-weight: bold;
     color: #fff;
-    background: rgba(0,0,0,0.6);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 1000;
+    margin: 20px auto 0;
+    transition: 0.3s ease;
+  }
+
+  .close:hover {
+    background: #f6d743;
+    color: #111;
   }
 
   .modal-body {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
   }
 
   .modal-body .left {
@@ -845,7 +862,7 @@
 
   .modal-body .right p {
     margin: 8px 0;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .designation-box {
@@ -929,12 +946,12 @@
     }
 
     .modal-body .right h3 {
-      font-size: 24px;
+      font-size: 18px;
       text-align: center;
     }
 
     .designation-box h4 {
-      font-size: 18px;
+      font-size: 17px;
       text-align: center;
     }
 
@@ -958,10 +975,8 @@
     /* ✅ Mobile Close Button */
     .close {
       font-size: 28px;
-      right: 15px;
-      top: 15px;
-      width: 36px;
-      height: 36px;
+      width: 44px;
+      height: 44px;
     }
   }
 </style>
@@ -972,8 +987,8 @@
 
 <section class="why-choose-us">
   <div class="container">
-    <h2 class="section-title" data-aos="fade-up">Why Choose <span>Blackfit</span>?</h2>
-    <div class="feature-grid">
+    <h2 class="section-title" data-aos="fade-up">Why Choose <span>Us</span>?</h2><br>
+    <div class="feature-grid"> 
 
       <!-- Feature 1 -->
       <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
@@ -996,10 +1011,10 @@
       <!-- Feature 3 -->
       <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
         <div class="icon">
-          <img src="https://img.icons8.com/fluency-systems-filled/48/FFD700/health-graph.png" alt="PCOD PCOS Icon" />
+          <img src="stretch-icon.png" alt="Pain-Free Stretching Icon">
         </div>
-        <h3>Women's PCOD / PCOS Management</h3>
-        <p>Specialized training and guidance to manage PCOD/PCOS naturally with fitness and nutrition.</p>
+        <h3>Pain-Free Stretching & Recovery</h3>
+        <p>Specialized stretching techniques that improve flexibility, correct posture, and help relieve body pain safely.</p>
       </div>
 
       <!-- Feature 4 -->
@@ -1007,8 +1022,8 @@
         <div class="icon">
           <img src="https://img.icons8.com/fluency-systems-filled/48/FFD700/baby.png" alt="Post Pregnancy Icon" />
         </div>
-        <h3>Post-Pregnancy <br> Weight Loss Training</h3>
-        <p>Safe and effective workouts tailored for mothers to regain strength and fitness post-pregnancy.</p>
+        <h3>PCOD / PCOS & Post-Pregnancy Weight Loss Guide</h3>
+        <p>Safe and effective workouts tailored for womens to regain strength and fitness.</p>
       </div>
 
       <!-- Feature 5 -->
@@ -1902,13 +1917,12 @@ document.addEventListener("DOMContentLoaded", () => {
 <div id="popup1" class="popup">
   <div class="popup-content">
     <span class="close" onclick="closePopup('popup1')">&times;</span>
-    <h2> Pain Free Wellness 🌿</h2>
+    <h2> Pain Free Wellness 🌿</h2><br>
     <p>
       Experience the recovery & gentle relief without artificial supplements.  
       A holistic approach combining stretching, posture alignment, and  
       wellness-focused practices designed to reduce pain naturally & enhance your overall well-being.
     </p>
-    <br>
     <button class="primary-btn" onclick="openPopup('popup2')">🔎 Check Your Pain</button>
   </div>
 </div>
